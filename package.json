@@ -16,14 +16,14 @@
     "cookie-parser": "1.4.7",
     "debug": "4.4.0",
     "dotenv": "16.4.7",
-    "express": "5.0.1",
+    "express": "5.1.0",
     "http-errors": "2.0.0",
-    "mongoose": "8.13.1",
+    "mongoose": "8.13.2",
     "morgan": "1.10.0",
     "pug": "3.0.3",
-    "ts-cache-mongoose": "1.7.2",
-    "ts-migrate-mongoose": "4.0.7",
-    "ts-patch-mongoose": "2.8.1"
+    "ts-cache-mongoose": "1.7.3",
+    "ts-migrate-mongoose": "4.0.8",
+    "ts-patch-mongoose": "2.8.2"
   },
   "devDependencies": {
     "@types/cookie-parser": "1.4.8",
@@ -31,12 +31,12 @@
     "@types/express": "5.0.1",
     "@types/http-errors": "2.0.4",
     "@types/morgan": "1.9.9",
-    "@types/node": "22.13.14",
-    "@vitest/coverage-v8": "3.0.9",
+    "@types/node": "22.14.0",
+    "@vitest/coverage-v8": "3.1.1",
     "mongodb-memory-server": "10.1.4",
     "open-cli": "8.0.0",
     "tsx": "4.19.3",
-    "typescript": "5.8.2",
-    "vitest": "3.0.9"
+    "typescript": "5.8.3",
+    "vitest": "3.1.1"
   }
 }
