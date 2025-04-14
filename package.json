@@ -15,7 +15,7 @@
     "@biomejs/biome": "1.9.4",
     "cookie-parser": "1.4.7",
     "debug": "4.4.0",
-    "dotenv": "16.4.7",
+    "dotenv": "16.5.0",
     "express": "5.1.0",
     "http-errors": "2.0.0",
     "mongoose": "8.13.2",
@@ -23,7 +23,7 @@
     "pug": "3.0.3",
     "ts-cache-mongoose": "1.7.3",
     "ts-migrate-mongoose": "4.0.8",
-    "ts-patch-mongoose": "2.8.2"
+    "ts-patch-mongoose": "2.9.0"
   },
   "devDependencies": {
     "@types/cookie-parser": "1.4.8",
@@ -31,7 +31,7 @@
     "@types/express": "5.0.1",
     "@types/http-errors": "2.0.4",
     "@types/morgan": "1.9.9",
-    "@types/node": "22.14.0",
+    "@types/node": "22.14.1",
     "@vitest/coverage-v8": "3.1.1",
     "mongodb-memory-server": "10.1.4",
     "open-cli": "8.0.0",
