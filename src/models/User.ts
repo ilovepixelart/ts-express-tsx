@@ -1,5 +1,4 @@
 import mongoose from 'mongoose'
-
 import { patchHistoryPlugin } from 'ts-patch-mongoose'
 import { USER_CREATED, USER_DELETED, USER_UPDATED } from '../constants/events.js'
 

@@ -3,12 +3,12 @@
  */
 
 import dotenv from 'dotenv'
+
 dotenv.config()
 
 import http from 'node:http'
 import debug from 'debug'
 import app from '../app.js'
-
 import MigrationClient from '../clients/MigrationClient.js'
 import MongooseClient from '../clients/MongooseClient.js'
 
