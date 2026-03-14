@@ -5,7 +5,7 @@ export async function up() {
   const { User } = await getModels()
 
   // Write migration here
-  await User.findOneAndUpdate({ name: 'John Doe' }, { name: 'John Doe', role: 'admin' }, { upsert: true, new: true })
+  await User.findOneAndUpdate({ name: 'John Doe' }, { name: 'John Doe', role: 'admin' }, { upsert: true, returnDocument: 'after' })
 }
 
 export async function down() {
