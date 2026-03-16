@@ -21,9 +21,9 @@
     "mongoose": "9.3.0",
     "morgan": "1.10.1",
     "pug": "3.0.4",
-    "ts-cache-mongoose": "1.7.7",
-    "ts-migrate-mongoose": "5.1.0",
-    "ts-patch-mongoose": "2.9.6"
+    "ts-cache-mongoose": "2.1.0",
+    "ts-migrate-mongoose": "5.2.0",
+    "ts-patch-mongoose": "3.0.0"
   },
   "devDependencies": {
     "@types/cookie-parser": "1.4.10",
