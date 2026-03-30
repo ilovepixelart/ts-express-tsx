@@ -12,32 +12,32 @@
     "test:open": "npm test && open-cli coverage/lcov-report/index.html"
   },
   "dependencies": {
-    "@biomejs/biome": "2.4.7",
+    "@biomejs/biome": "2.4.9",
     "cookie-parser": "1.4.7",
     "debug": "4.4.3",
     "dotenv": "17.3.1",
     "express": "5.2.1",
     "http-errors": "2.0.1",
-    "mongoose": "9.3.0",
+    "mongoose": "9.3.3",
     "morgan": "1.10.1",
     "pug": "3.0.4",
-    "ts-cache-mongoose": "1.7.7",
-    "ts-migrate-mongoose": "5.1.0",
-    "ts-patch-mongoose": "2.9.6"
+    "ts-cache-mongoose": "2.1.0",
+    "ts-migrate-mongoose": "5.2.0",
+    "ts-patch-mongoose": "3.1.0"
   },
   "devDependencies": {
     "@types/cookie-parser": "1.4.10",
-    "@types/debug": "4.1.12",
+    "@types/debug": "4.1.13",
     "@types/express": "5.0.6",
     "@types/http-errors": "2.0.5",
     "@types/morgan": "1.9.10",
     "@types/node": "25.5.0",
-    "@vitest/coverage-v8": "4.1.0",
+    "@vitest/coverage-v8": "4.1.2",
     "mongodb-memory-server": "11.0.1",
-    "open-cli": "8.0.0",
+    "open-cli": "9.0.0",
     "tsx": "4.21.0",
-    "typescript": "5.9.3",
-    "vitest": "4.1.0"
+    "typescript": "6.0.2",
+    "vitest": "4.1.2"
   },
   "overrides": {
     "file-type": "21.3.2"
