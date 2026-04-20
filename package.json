@@ -12,7 +12,7 @@
     "test:open": "npm test && open-cli coverage/lcov-report/index.html"
   },
   "dependencies": {
-    "@biomejs/biome": "2.4.11",
+    "@biomejs/biome": "2.4.12",
     "cookie-parser": "1.4.7",
     "debug": "4.4.3",
     "dotenv": "17.4.2",
@@ -21,7 +21,7 @@
     "mongoose": "9.4.1",
     "morgan": "1.10.1",
     "pug": "3.0.4",
-    "ts-cache-mongoose": "2.1.0",
+    "ts-cache-mongoose": "2.2.0",
     "ts-migrate-mongoose": "5.3.2",
     "ts-patch-mongoose": "4.0.0"
   },
@@ -36,7 +36,7 @@
     "mongodb-memory-server": "11.0.1",
     "open-cli": "9.0.0",
     "tsx": "4.21.0",
-    "typescript": "^6.0.2",
+    "typescript": "^6.0.3",
     "vitest": "4.1.4"
   },
   "overrides": {
