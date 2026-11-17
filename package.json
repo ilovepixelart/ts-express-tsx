@@ -32,12 +32,12 @@
     "@types/http-errors": "2.0.5",
     "@types/morgan": "1.9.10",
     "@types/node": "25.9.9",
-    "@vitest/coverage-v8": "4.1.12",
+    "@vitest/coverage-v8": "5.1.0",
     "mongodb-memory-server": "11.3.0",
     "open-cli": "9.0.0",
     "tsx": "4.23.15",
     "typescript": "^6.0.3",
-    "vitest": "4.1.12"
+    "vitest": "5.1.0"
   },
   "overrides": {
     "file-type": "21.3.2"
