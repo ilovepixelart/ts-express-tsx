@@ -12,7 +12,6 @@
     "test:open": "npm test && open-cli coverage/lcov-report/index.html"
   },
   "dependencies": {
-    "@biomejs/biome": "2.6.8",
     "cookie-parser": "1.4.7",
     "debug": "4.4.3",
     "dotenv": "18.0.10",
@@ -26,6 +25,7 @@
     "ts-patch-mongoose": "4.0.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.6.8",
     "@types/cookie-parser": "1.4.10",
     "@types/debug": "4.1.13",
     "@types/express": "5.0.6",
