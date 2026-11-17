@@ -75,7 +75,7 @@ jobs:
           enable-cache: false
 
       - name: Run zizmor
-        run: uvx zizmor@1.32.0 --format=plain --config .github/zizmor.yml .github/workflows
+        run: uvx zizmor@1.32.0 --format=plain --config .github/zizmor.yml .github
 
   ci:
     name: CI
