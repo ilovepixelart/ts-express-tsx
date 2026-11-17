@@ -12,11 +12,19 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     name: Build & test (${{ matrix.node-version }})
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
     strategy:
+      fail-fast: false
       matrix:
         node-version: [22.x, 24.x, 26.x]
     steps:
@@ -31,17 +39,58 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
 
+      # No install script is needed: the esbuild binary resolves from its platform
+      # package without its postinstall, and mongodb-memory-server downloads the
+      # MongoDB binary on first use in the tests.
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Biome
         run: npm run biome
 
       - name: Type check
-        run: npx tsc --noEmit -p tsconfig.json
+        run: npm run type:check
 
       - name: Build
         run: npm run build
 
       - name: Test
         run: npm test
+
+  zizmor:
+    name: Audit workflows (zizmor)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          enable-cache: false
+
+      - name: Run zizmor
+        run: uvx zizmor@1.32.0 --format=plain --config .github/zizmor.yml .github/workflows
+
+  ci:
+    name: CI
+    needs: [check, zizmor]
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: {}
+    steps:
+      - name: Require every job to succeed
+        env:
+          RESULTS: ${{ toJSON(needs.*.result) }}
+        run: |
+          echo "Job results: $RESULTS"
+          if [ "$(jq -r 'map(select(. != "success")) | length' <<<"$RESULTS")" != "0" ]; then
+            echo "::error::At least one required job did not succeed"
+            exit 1
+          fi
