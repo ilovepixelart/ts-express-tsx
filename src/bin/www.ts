@@ -6,13 +6,13 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
+import type { Server } from 'node:http'
 import http from 'node:http'
 import debug from 'debug'
 import app from '../app'
 import MigrationClient from '../clients/MigrationClient'
 import MongooseClient from '../clients/MongooseClient'
 
-import type { Server } from 'node:http'
 import type { HttpError } from 'http-errors'
 
 import '../handlers/UserHandler'
